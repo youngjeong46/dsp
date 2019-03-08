@@ -43,24 +43,24 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-ls - displays all files
-ls -a - displays all files (including hidden files)
-ls -l - displays files in long listing
-ls -lh - displays files in long listing, with unit suffixes
-ls -lah - displays all files in long listing, with unit suffixes
-ls -t - displays files by newest first
-ls -Glp - displays files in long list, directories highlighted in color with ending in / 
+* ls - displays all files
+* ls -a - displays all files (including hidden files)
+* ls -l - displays files in long listing
+* ls -lh - displays files in long listing, with unit suffixes
+* ls -lah - displays all files in long listing, with unit suffixes
+* ls -t - displays files by newest first
+* ls -Glp - displays files in long list, directories highlighted in color with ending in / 
 ---
 
 ### Q3.  More List Files in Unix  
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-ls -R: displays subdirectories
-ls -p: displays directories with /
-ls -r: displays in reverse order
-ls -S: displays by size (largest first)
-ls -u: displays files by access time
+* ls -R: displays subdirectories
+* ls -p: displays directories with /
+* ls -r: displays in reverse order
+* ls -S: displays by size (largest first)
+* ls -u: displays files by access time
 
 ---
 
@@ -72,8 +72,8 @@ xargs can take a stream of input and use it as an argument of another command (j
 
 For example: the following bash command prints out a list of all files in a single line (since no command follows args):
 
-'''console
+```console
 $ ls -l | xargs
-'''
+```
  
 
