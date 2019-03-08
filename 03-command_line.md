@@ -20,8 +20,16 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
+* **pwd** - show current working directory path
+* **mkdir** - creating a directory
+* **rmdir** - deleting a directory (empty)
+* **rm -rf** - deleting a directory (non empty)
+* **touch** - creating a file using `touch` command
+* **rm** - deleting a file
+* **mv file1 file2** - renaming a file from file1 to file2
+* **ls .?\*** - listing hidden files
+* **cp SOURCE DESTINATION** - copying a file from one directory (SOURCE) to another (DESTINATION)
+* **diff file1 file2** - looks at file1 and file2 and shows the difference 
 ---
 
 ### Q2.  List Files in Unix   
@@ -35,15 +43,24 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
+ls - displays all files
+ls -a - displays all files (including hidden files)
+ls -l - displays files in long listing
+ls -lh - displays files in long listing, with unit suffixes
+ls -lah - displays all files in long listing, with unit suffixes
+ls -t - displays files by newest first
+ls -Glp - displays files in long list, directories highlighted in color with ending in / 
 ---
 
 ### Q3.  More List Files in Unix  
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+ls -R: displays subdirectories
+ls -p: displays directories with /
+ls -r: displays in reverse order
+ls -S: displays by size (largest first)
+ls -u: displays files by access time
 
 ---
 
@@ -51,7 +68,12 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+xargs can take a stream of input and use it as an argument of another command (just echos if there is no follow up command)
 
+For example: the following bash command prints out a list of all files in a single line (since no command follows args):
+
+'''console
+$ ls -l | xargs
+'''
  
 
