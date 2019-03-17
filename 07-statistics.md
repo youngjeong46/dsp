@@ -86,14 +86,56 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+**ANSWER:** The Bayes Theorem states the following:
+```
+	P(A|B) = P(A)P(B|A)/P(B)
+```
+
+We want to know the probability of Elvis' male twin being an identical twin. Defining A = Elvis' birth was an identical twin birth, B = Elvis' twin was male should give us what we need. Also defining C = Elvis' birth was a fraternal twin birth should help us with solving the problem, as we will see.
+
+- P(A) = Probability of Elvis' birth being identical twin birth is given by looking at probability of an identical twin birth event in the population over all twin birth events in the population. This is given by:
+
+   ```
+   		P(A) = 1/300(1/300+1/125) = 0.29411
+   ```
+- P(B|A) = Probability of a twin being male given that it was an identical twin; this is 1, because by definition all identical twins must be of same sex. Since Elvis was male, his identical twin must be male.
+
+- P(B) = Probability of an event of a twin being male; This is more difficult to generate. Either identical or fraternal twin can be male; we know that an identical twin must be male if one is male. Fraternal twin, however, have about an equal probability of it being male or female given the other is male. Therefore we can rewrite this as:
+
+	```
+	   P(B) = P(B|A)P(A) + P(B|C)P(C) 
+	   		= 1(.29411) + (1/2)((1/125)/(1/300+1/125)) 
+	   		= .29411+(.5)(.70588) 
+	   		= 0.64705
+	```
+
+Now then we can calculate our problem:
+
+```
+	P(A|B) = P(A)P(B|A)/P(B)
+	P(A|B) = (0.29411)*(1)/(0.64705)
+	P(A|B) = 0.45453
+```
+
+Hence, the probability that Elvis' dead twin brother was an identical twin is 0.45453.
 
 ---
 
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Both frequentist and Bayesian statistics are inferential statisics; meaning that we infer some properties or make propositions of a population by testing hypotheses and deducing propositions from a statistical model. Usually a sample of the population is used to accomplish. 
+
+Frequentist is one of the inferential statistics and is based on the notion of repeated sampling. Uncertainty is NOT modeled using a distribution but rather estimated from running an infinite repetition of the same, statistically independent experiments. A conclusion is given with a high probability among this set of experiments. Prior knowledge is not used in the frequentist inference.
+
+Bayesian is another and it's based on the notion of information availability; uncertainty is modeled using a probability distribution, and as more information becomes available in the form of a new set of data, the probability is then updated to reflect what we know now vs. what we knew before.
+
+To illustrate an example, suppose we want to estimate the average male height. Assume that the height has normal distribution and that the standard deviation is available.
+
+The frequentist will say that we don't know the mean and we cannot assign a probability to it, but we can collect data from a sample of the population over and over again and estimate the population height mean based on the means of the samples we have taken.
+
+The Bayesian will say that the mean height is indeed unknown but we can assign a probability distribution to the mean and then as we use sample data, we can update the distribution.
+
 
 ---
 

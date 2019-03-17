@@ -22,7 +22,7 @@ Using these, we can generate a plot of both and see what happens. First we gener
 	thinkplot.Config(xlabel='Number', ylabel='PMF')
 ```
 
-![Plot of PMF](4-1-PMF.png)
+![Plot of PMF](4-1-pmf.png)
 
 The plot of the PMF is blank; this is likely because the function Hist determines the width of the bins by looking at the minimum value between the two (unless a binning option is given). However, since the values are so infinitestimal, without an option given the plot will not render. We can try with binning option to get a clearer picture:
 
@@ -32,7 +32,7 @@ The plot of the PMF is blank; this is likely because the function Hist determine
 	thinkplot.Config(xlabel='Number', ylabel='PMF')
 ```
 
-![Plot of PMF with width=0.2](4-1-PMF-width-0.2.png)
+![Plot of PMF with width=0.2](4-1-pmf-width-0.2.png)
 
 Now we can see that the distribution is normal since the spread is pretty much identical. Now  we take a look at the plot of the CDF:
 
@@ -41,6 +41,6 @@ Now we can see that the distribution is normal since the spread is pretty much i
 	thinkplot.Config(xlabel='', ylabel='CDF')
 ```
 
-![Plot of CDF](4-1-CDF.png)
+![Plot of CDF](4-1-cdf.png)
 
 As we can see, the distribution of the CDF is uniform.
